@@ -8,10 +8,15 @@ import { aboutOverview, aboutSpotlight } from "@/content/portfolio";
 import Link from "next/link";
 
 
+type SpotlightVars = { ["--spot-x"]: string; ["--spot-y"]: string };
+
 export default function About() {
   const reduceMotion = useReducedMotion();
   const spotlightRef = useRef<HTMLDivElement>(null);
-  const [spotlightStyle, setSpotlightStyle] = useState({ "--spot-x": "50%", "--spot-y": "50%" } as React.CSSProperties);
+  const [spotlightStyle, setSpotlightStyle] = useState<SpotlightVars>({
+    "--spot-x": "50%",
+    "--spot-y": "50%",
+  });
 
   useEffect(() => {
     if (reduceMotion || !spotlightRef.current) return;
@@ -20,7 +25,7 @@ export default function About() {
       const rect = el.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100;
       const y = ((e.clientY - rect.top) / rect.height) * 100;
-      setSpotlightStyle({ "--spot-x": `${x}%`, "--spot-y": `${y}%` } as React.CSSProperties);
+      setSpotlightStyle({ "--spot-x": `${x}%`, "--spot-y": `${y}%` });
     };
     el.addEventListener("mousemove", onMove);
     return () => el.removeEventListener("mousemove", onMove);
