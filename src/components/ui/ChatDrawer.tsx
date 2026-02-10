@@ -123,7 +123,7 @@ export default function ChatDrawer({ open, onClose }: { open: boolean; onClose: 
       {open ? (
         <motion.div
           className="fixed inset-0 z-[60]"
-          initial={reduceMotion ? false : { opacity: 0 }}
+          initial={reduceMotion ? undefined : { opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={transition}
@@ -132,7 +132,7 @@ export default function ChatDrawer({ open, onClose }: { open: boolean; onClose: 
 
           <motion.aside
             className="absolute right-4 top-4 flex h-[92vh] w-[92vw] max-w-[420px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-base-900/90 backdrop-blur-2xl"
-            initial={reduceMotion ? false : { x: 40, opacity: 0 }}
+            initial={reduceMotion ? undefined : { x: 40, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 40, opacity: 0 }}
             transition={getTransition(reduceMotion ?? false, "default")}
@@ -198,7 +198,7 @@ export default function ChatDrawer({ open, onClose }: { open: boolean; onClose: 
                 <motion.div
                   key={`${msg.role}-${index}`}
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
-                  initial={reduceMotion ? false : { opacity: 0, y: 8 }}
+                  initial={reduceMotion ? undefined : { opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={transition}
                 >
@@ -247,7 +247,7 @@ export default function ChatDrawer({ open, onClose }: { open: boolean; onClose: 
               {loading ? (
                 <motion.div
                   className="flex justify-start"
-                  initial={reduceMotion ? false : { opacity: 0 }}
+                  initial={reduceMotion ? undefined : { opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={transition}
                 >

@@ -43,8 +43,8 @@ export default function Skills() {
                 {skillsDominant.skills.map((skill, i) => (
                   <motion.li
                     key={skill}
-                    initial={reduceMotion ? false : { opacity: 0, x: -8 }}
-                    whileInView={reduceMotion ? false : { opacity: 1, x: 0 }}
+                    initial={reduceMotion ? undefined : { opacity: 0, x: -8 }}
+                    whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.05 + i * 0.04, duration: 0.3 }}
                     className="flex items-baseline gap-2 text-sm text-white/80"
@@ -72,8 +72,8 @@ export default function Skills() {
                 {toolingChips.map((chip, i) => (
                   <motion.li
                     key={chip}
-                    initial={reduceMotion ? false : { opacity: 0, x: -6 }}
-                    whileInView={reduceMotion ? false : { opacity: 1, x: 0 }}
+                    initial={reduceMotion ? undefined : { opacity: 0, x: -6 }}
+                    whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: stagger + 0.03 * i, duration: 0.28 }}
                     className="flex items-baseline gap-2 text-sm text-white/70"
@@ -107,8 +107,8 @@ export default function Skills() {
                     {block.skills.map((skill, i) => (
                       <motion.li
                         key={skill}
-                        initial={reduceMotion ? false : { opacity: 0, x: -6 }}
-                        whileInView={reduceMotion ? false : { opacity: 1, x: 0 }}
+                        initial={reduceMotion ? undefined : { opacity: 0, x: -6 }}
+                        whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: stagger * (blockIndex + 1) + 0.03 * i, duration: 0.28 }}
                         className="flex items-baseline gap-2 text-sm text-white/70"

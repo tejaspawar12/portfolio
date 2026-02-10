@@ -47,7 +47,7 @@ export default function Projects() {
       {/* Hero / Project card */}
       <motion.div
         className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-base-800/90 via-base-900 to-neon-500/5 p-8 shadow-2xl backdrop-blur-sm md:p-10"
-        initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+        initial={reduceMotion ? undefined : { opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={transition}
@@ -58,7 +58,7 @@ export default function Projects() {
         <div className="relative z-10">
           <motion.span
             className="inline-block rounded-full border border-neon-500/30 bg-neon-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-neon-400"
-            initial={reduceMotion ? false : { opacity: 0, scale: 0.9 }}
+            initial={reduceMotion ? undefined : { opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ ...transition, delay: 0.1 }}
@@ -67,7 +67,7 @@ export default function Projects() {
           </motion.span>
           <motion.h2
             className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl"
-            initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+            initial={reduceMotion ? undefined : { opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ ...transition, delay: 0.15 }}
@@ -76,7 +76,7 @@ export default function Projects() {
           </motion.h2>
           <motion.p
             className="mt-3 text-lg text-neon-400"
-            initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+            initial={reduceMotion ? undefined : { opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ ...transition, delay: 0.2 }}
@@ -85,7 +85,7 @@ export default function Projects() {
           </motion.p>
           <motion.p
             className="mt-4 max-w-2xl text-sm leading-relaxed text-white/80 sm:text-base"
-            initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+            initial={reduceMotion ? undefined : { opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ ...transition, delay: 0.25 }}
@@ -94,7 +94,7 @@ export default function Projects() {
           </motion.p>
           <motion.div
             className="mt-8 flex flex-wrap items-center gap-4"
-            initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+            initial={reduceMotion ? undefined : { opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ ...transition, delay: 0.35 }}
@@ -192,7 +192,7 @@ export default function Projects() {
       {/* Tech stack */}
       <motion.div
         className="mt-14 rounded-2xl border border-white/10 bg-base-800/50 p-6 backdrop-blur-sm md:p-8"
-        initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+        initial={reduceMotion ? undefined : { opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={transition}
@@ -235,7 +235,7 @@ export default function Projects() {
       {/* Why it stands out */}
       <motion.div
         className="mt-14 rounded-2xl border border-neon-500/20 bg-gradient-to-br from-neon-500/5 to-transparent p-6 md:p-8"
-        initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+        initial={reduceMotion ? undefined : { opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={transition}
@@ -260,7 +260,7 @@ export default function Projects() {
       {/* CTA footer */}
       <motion.div
         className="mt-12 flex flex-col items-center justify-center gap-4 rounded-2xl border border-white/10 bg-white/5 py-8 text-center"
-        initial={reduceMotion ? false : { opacity: 0 }}
+        initial={reduceMotion ? undefined : { opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={transition}
