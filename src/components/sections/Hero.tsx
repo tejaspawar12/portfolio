@@ -10,7 +10,7 @@ import { profile } from "@/content/portfolio";
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const parallaxRef = useRef<HTMLDivElement>(null);
-  const prefersReducedMotion = useReducedMotion();
+  const prefersReducedMotion = useReducedMotion() ?? false;
 
   useEffect(() => {
     if (prefersReducedMotion) return;

@@ -26,7 +26,7 @@ const baseMessages: Message[] = [
 ];
 
 export default function ChatDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useReducedMotion() ?? false;
   const [input, setInput] = useState("");
   const [voiceOn, setVoiceOn] = useState(false);
   const [micOn, setMicOn] = useState(false);

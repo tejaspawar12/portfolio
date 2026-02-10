@@ -14,7 +14,7 @@ type ModalProps = {
 };
 
 export default function Modal({ open, onClose, title, children, layoutId, className = "" }: ModalProps) {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useReducedMotion() ?? false;
   return (
     <AnimatePresence>
       {open ? (

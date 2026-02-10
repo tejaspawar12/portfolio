@@ -8,7 +8,7 @@ import { skillsDominant, skillsSupporting, toolingChips, skillsSubtitle } from "
 const blockIcons = [Database, Cloud];
 
 export default function Skills() {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useReducedMotion() ?? false;
   const sectionVariants = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } };
   const stagger = 0.08;
 

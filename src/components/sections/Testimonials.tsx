@@ -9,7 +9,7 @@ import { getTransition } from "@/lib/motion";
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
-  const prefersReducedMotion = useReducedMotion();
+  const prefersReducedMotion = useReducedMotion() ?? false;
 
   useEffect(() => {
     if (prefersReducedMotion) return;

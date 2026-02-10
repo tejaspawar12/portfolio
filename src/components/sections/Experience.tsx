@@ -7,7 +7,7 @@ import { experience } from "@/content/portfolio";
 import { getInViewProps, getReveal, getTransition, staggerContainer } from "@/lib/motion";
 
 export default function Experience() {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useReducedMotion() ?? false;
   const inView = getInViewProps(reduceMotion);
   return (
     <section id="experience" className="section-pad py-20">

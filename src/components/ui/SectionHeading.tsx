@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { getInViewProps, getReveal, getTransition } from "@/lib/motion";
 
 export default function SectionHeading({ title, subtitle }: { title: string; subtitle?: string }) {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useReducedMotion() ?? false;
   const inView = getInViewProps(reduceMotion);
   return (
     <motion.div

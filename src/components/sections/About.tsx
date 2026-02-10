@@ -11,7 +11,7 @@ import Link from "next/link";
 type SpotlightVars = { ["--spot-x"]: string; ["--spot-y"]: string };
 
 export default function About() {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useReducedMotion() ?? false;
   const spotlightRef = useRef<HTMLDivElement>(null);
   const [spotlightStyle, setSpotlightStyle] = useState<SpotlightVars>({
     "--spot-x": "50%",

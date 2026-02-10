@@ -36,7 +36,7 @@ const featureIcons = [
 ];
 
 export default function Projects() {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useReducedMotion() ?? false;
   const inView = getInViewProps(reduceMotion);
   const transition = getTransition(reduceMotion ?? false, "default");
 
