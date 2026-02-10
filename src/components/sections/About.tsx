@@ -174,8 +174,8 @@ export default function About() {
               {aboutSpotlight.stackChips.map((chip, i) => (
                 <motion.span
                   key={chip}
-                  initial={reduceMotion ? false : { opacity: 0, scale: 0.95 }}
-                  whileInView={reduceMotion ? false : { opacity: 1, scale: 1 }}
+                  initial={reduceMotion ? undefined : { opacity: 0, scale: 0.95 }}
+                  whileInView={reduceMotion ? undefined : { opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.05 * i, duration: 0.3 }}
                   className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80"
