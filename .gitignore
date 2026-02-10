@@ -1,0 +1,35 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build
+.next
+out
+build
+dist
+
+# Environment (never commit secrets)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debug / IDE
+npm-debug.log*
+.DS_Store
+*.pem
+*.log
+.eslintcache
+.turbo
+.cache
+coverage
+.vercel
+.vscode
+.idea
+.history
+data/assistant/knowledge.json
+
+# TypeScript
+next-env.d.ts

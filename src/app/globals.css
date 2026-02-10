@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-base-900 text-white antialiased;
+  font-feature-settings: "ss01" on, "ss02" on;
+}
+
+.light body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.light .bg-base-900 {
+  background-color: #f8fafc !important;
+}
+
+.light .bg-base-800 {
+  background-color: #eef2f7 !important;
+}
+
+.light .bg-white\/5 {
+  background-color: rgba(15, 23, 42, 0.06) !important;
+}
+
+.light .border-white\/10 {
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+.light .text-white {
+  color: #0f172a !important;
+}
+
+.light .text-white\/80 {
+  color: rgba(15, 23, 42, 0.8) !important;
+}
+
+.light .text-white\/70 {
+  color: rgba(15, 23, 42, 0.7) !important;
+}
+
+.light .text-white\/60 {
+  color: rgba(15, 23, 42, 0.6) !important;
+}
+
+.light .text-white\/50 {
+  color: rgba(15, 23, 42, 0.5) !important;
+}
+
+.light .glass {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 10px 40px -12px rgba(15, 23, 42, 0.15);
+}
+
+* {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-500 focus-visible:ring-offset-2 focus-visible:ring-offset-base-900;
+}
+
+.section-pad {
+  @apply px-5 sm:px-8 lg:px-16;
+}
+
+.glass {
+  @apply bg-white/5 border border-white/10 shadow-glass backdrop-blur-xl;
+}
+
+.grid-bg {
+  background-size: 32px 32px;
+  background-image: radial-gradient(circle at 1px 1px, rgba(124,247,255,0.15) 1px, transparent 0);
+}
+
+.noise-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="160" height="160" filter="url(%23n)" opacity="0.25"/></svg>');
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.gradient-spotlight {
+  background: radial-gradient(600px circle at var(--spot-x, 50%) var(--spot-y, 40%), rgba(124,247,255,0.18), transparent 60%);
+}
+
+.ai-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(124,247,255,0.12) 1px, transparent 0),
+    radial-gradient(circle at 1px 1px, rgba(52,211,153,0.08) 1px, transparent 0);
+  background-size: 28px 28px, 48px 48px;
+}
+
+.scanline {
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent, rgba(124,247,255,0.2), transparent);
+  animation: scan 6s linear infinite;
+  opacity: 0.35;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,88 @@
+% !TEX program = xelatex
+% Tejas Pawar — One-page resume
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+\geometry{margin=0.6in, top=0.5in, bottom=0.5in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titleformat{\section}{\normalfont\bfseries\uppercase}{}{0em}{}[\vspace{-2pt}\titlerule\vspace{4pt}]
+
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=black}
+\pagestyle{empty}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+  {\fontsize{18}{20}\selectfont\textbf{Tejas Pawar}}\\[4pt]
+  \href{mailto:tejasp@udel.edu}{tejasp@udel.edu} \textbar{} +1 (302) 444-2983 \textbar{} \href{https://github.com/tejaspawar12}{GitHub} \textbar{} \href{https://www.linkedin.com/in/pawar-tejas123/}{LinkedIn}
+\end{center}
+\vspace{2pt}
+
+% --- Summary ---
+\section*{Summary}
+AI Systems Engineer with experience in machine learning and GenAI infrastructure. Design deterministic + LLM hybrid systems, retrieval-augmented pipelines, and scalable backend APIs with Python and FastAPI. Skilled in model training, evaluation, and data pipelines; deploy and maintain systems on AWS and Docker. Build reliable, grounded AI systems with measurable outcomes.
+
+% --- Experience ---
+\section*{Experience}
+
+\textbf{Graduate Assistant (IT-ATS)} \hfill June 2025 -- May 2026\\
+University of Delaware, Academic Technology Services \textbar{} Newark, Delaware, USA
+\begin{itemize}[leftmargin=*, nosep, topsep=1pt]
+  \item Contributed to AWS-based AI infrastructure for StudyAiDE and PATHS Engine platforms.
+  \item Designed and implemented retrieval-augmented AI pipelines integrating Neo4j knowledge graphs with vector-based search systems.
+  \item Developed contextual faculty AI agents using AWS Bedrock for model inference and structured tool-based workflows.
+  \item Built backend API services (FastAPI) to support AI-driven academic tools.
+  \item Used AWS services (Bedrock, RDS, S3, IAM) for deployment and cloud workflows.
+  \item Contributed to model fine-tuning and training workflows to adapt foundation models for domain-specific academic use cases.
+  \item Implemented Docker-based multi-service architecture separating API, database, and AI inference layers.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Machine Learning Engineer Intern} \hfill March 2023 -- July 2023\\
+LogicMo Systems Private Limited \textbar{} Pune, India
+\begin{itemize}[leftmargin=*, nosep, topsep=1pt]
+  \item Developed computer vision models for vehicle object detection using YOLO architecture implemented in TensorFlow.
+  \item Built an end-to-end data pipeline converting raw video streams into structured image datasets for supervised training.
+  \item Designed preprocessing workflows including frame extraction, resizing, normalization, and augmentation to improve model generalization.
+  \item Trained and optimized detection models through systematic hyperparameter tuning (learning rate, batch size, anchor configurations, optimizer selection).
+  \item Achieved 0.97 mAP on validation dataset, improving object detection reliability for vehicle-based use cases.
+\end{itemize}
+
+% --- Education ---
+\section*{Education}
+
+\textbf{M.S. in Data Science} \hfill May 2026\\
+University of Delaware, USA\\
+Relevant: Applied ML, NLP, Data Mining, Algorithm Design, Unstructured Data Analytics, Ethical AI, DBMS.
+
+\textbf{B.E. in Electronics \& Telecommunication Engineering (Honors in Data Science)} \hfill May 2024\\
+Savitribai Phule Pune University, India\\
+Relevant: Machine Learning, Deep Learning, Data Structures \& Algorithms, Probability \& Statistics.
+
+% --- Technical Skills ---
+\section*{Technical Skills}
+Python, SQL, Generative AI, Agentic AI, Retrieval-Augmented Generation (RAG), Reinforcement Learning, Hyperparameter Tuning, Natural Language Processing (NLP), Computer Vision, LLM Integration, OpenAI API, PostgreSQL, MySQL, Neo4j, vector databases, TensorFlow, PyTorch, Keras, Scikit-learn, MLlib, NumPy, Pandas, SciPy, AWS, Docker, CI/CD, GitHub Actions.
+
+% --- Project ---
+\section*{Project}
+
+\href{https://enchanting-heart-production.up.railway.app/}{\textbf{Live}} \textbar{} \textbf{AI-Powered Fitness Coach} \textbar{} \textit{Full-Stack Cross-Platform Application}\\[-8pt]
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0pt]
+  \item Built and deployed a full-stack fitness application with FastAPI backend and cross-platform React Native (iOS, Android, Web) frontend using a single codebase.
+  \item Designed secure JWT authentication (access + refresh tokens) and integrated Claude for an AI coach with daily guidance, multi-turn chat, and automated weekly progress narratives; added usage tracking and fallback handling.
+  \item Designed 15+ REST endpoints using SQLAlchemy 2 ORM, Pydantic validation, dependency-injected auth, and Alembic-managed PostgreSQL schema migrations.
+  \item Implemented offline-first design (Zustand + AsyncStorage) with mutation queue and background sync so users can log workouts without connectivity; deployed backend and frontend on Railway.
+\end{itemize}
+
+
+\end{document}
